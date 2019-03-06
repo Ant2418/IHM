@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihmprojet.FXMLVisualisationController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <BorderPane prefHeight="140.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Label text="Visualisation des étudiants" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Label>
+               </center>
+               <bottom>
+                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="100.0" right="100.0" />
+                     </padding>
+                  </Separator>
+               </bottom>
+               <BorderPane.margin>
+                  <Insets bottom="50.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+         <bottom>
+            <BorderPane prefHeight="81.0" prefWidth="700.0" scaleShape="false" BorderPane.alignment="CENTER">
+               <left>
+                  <Button fx:id="retour_bouton" mnemonicParsing="false" onAction="#changeScreenButtonPushedMenu" text="retour" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="93.0" top="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </left>
+               <right>
+                  <Button fx:id="supp_bouton" mnemonicParsing="false" text="suppression" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="93.0" top="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </right>
+            </BorderPane>
+         </bottom>
+         <center>
+            <TableView fx:id="table_etu_visu" prefHeight="251.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="col_nom" prefWidth="175.0" text="Nom" />
+                <TableColumn fx:id="col_prénom" prefWidth="175.0" text="Prénom" />
+                  <TableColumn fx:id="col_an" prefWidth="175.0" text="Année" />
+                  <TableColumn fx:id="col_promo" prefWidth="175.0" text="Promotion" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
