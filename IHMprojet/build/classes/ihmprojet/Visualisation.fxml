@@ -50,7 +50,7 @@
                   </Button>
                </left>
                <right>
-                  <Button fx:id="supp_bouton" mnemonicParsing="false" text="suppression" BorderPane.alignment="CENTER">
+                  <Button fx:id="supp_bouton" mnemonicParsing="false" onAction="#supprimerEtudiant" text="suppression" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets right="93.0" top="5.0" />
                      </BorderPane.margin>
@@ -59,12 +59,12 @@
             </BorderPane>
          </bottom>
          <center>
-            <TableView fx:id="table_etu_visu" prefHeight="251.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tableViewEtu" onMouseClicked="#userClickedOnTable" prefHeight="251.0" prefWidth="700.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="col_nom" prefWidth="175.0" text="Nom" />
-                <TableColumn fx:id="col_prénom" prefWidth="175.0" text="Prénom" />
-                  <TableColumn fx:id="col_an" prefWidth="175.0" text="Année" />
-                  <TableColumn fx:id="col_promo" prefWidth="175.0" text="Promotion" />
+                <TableColumn fx:id="colNom" onEditCommit="#changeNomCellEvent" prefWidth="175.0" text="Nom" />
+                <TableColumn fx:id="colPrenom" onEditCommit="#changePrenomCellEvent" prefWidth="175.0" text="Prénom" />
+                  <TableColumn fx:id="colAnnee" prefWidth="175.0" text="Année" />
+                  <TableColumn fx:id="colPromo" prefWidth="175.0" text="Promotion" />
               </columns>
             </TableView>
          </center>

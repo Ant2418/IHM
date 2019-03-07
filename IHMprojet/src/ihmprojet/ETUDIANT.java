@@ -1,28 +1,32 @@
 package ihmprojet;
 
-
 /**
- *
+ * Classe Etudiant qui est caracterise par 
+ *  - son nom
+ *  - son prenom
+ *  - son annee de naissance
+ *  - sa promotion
+ * 
  * @author Antoine
  */
 public class ETUDIANT {
     public String nom;
     public String prenom;
     public int annee;
-    private String p;
-    private String n;
-    private int a;
-
+    public String promo;
+    
      /**
      * Creation d'un etudiant
      * @param nom
      * @param prenom
      * @param annee 
+     * @param laPromo 
      */
-    public ETUDIANT(String nom, String prenom, int annee) {
+    public ETUDIANT(String nom, String prenom, int annee, String laPromo) {
         this.nom = nom;
         this.prenom = prenom;
         this.annee = annee;
+        this.promo = laPromo;
     }
     
     /**
@@ -72,5 +76,22 @@ public class ETUDIANT {
     public void setAnnee(int annee) {
         this.annee = annee;
     }
+    
+    /**
+     * Recupere la promotion de l'etudiant
+     * @return promo
+     */
+    public String getPromo() {
+        return promo;
+    }
+    
+    /**
+     * Modifie la promotion de l'etudiant
+     * @param promo 
+     */
+    public void setPromo(String promo) {
+        this.promo = promo;
+    }
+
     
 }
